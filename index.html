@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culart Catering — Меню 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Библиотека для чтения Excel -->
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">Culart Catering</h1>
+        <p class="fade-in">Банкетное меню • Фуршеты • Сезон Весна 2026</p>
+        
+        <!-- Индикатор загрузки -->
+        <div id="loading-indicator" class="loading">Загрузка меню...</div>
+        
+        <!-- Табы для тем (будут заполнены динамически) -->
+        <div class="tabs" id="theme-tabs"></div>
+    </header>
+
+    <!-- Контейнер для категорий -->
+    <div id="menu-container"></div>
+
+    <!-- Фиксированная кнопка корзины -->
+    <button id="cart-fixed-btn" class="cart-fixed-btn">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-counter" id="cart-counter">0</span>
+    </button>
+
+    <!-- Модальное окно корзины -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Корзина</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="cart-modal-body" id="cart-items"></div>
+            <div class="cart-modal-footer">
+                <p class="cart-total">Итого: <span id="cart-total">0</span> ₽</p>
+                <button id="checkout-btn" class="btn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Culart Catering | Самовывоз (район ДСК) – скидка 5%</p>
+        <p class="contact">Для расчёта банкетов и фуршетов: 700-274, 8914-2-700274</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
